@@ -1,12 +1,11 @@
 import Bird from './components/Bird';
 import GameContainer from './components/GameContainer';
+import { GameProvider } from './contexts/GameContext';
 
-export default function Home() {
+export default function Game() {
   return (
-    <div className='flex w-full justify-center'>
-      <GameContainer>
-        <Bird />
-      </GameContainer>
-    </div>
+    <GameProvider>
+      <GameContainer />;
+    </GameProvider>
   );
 }
